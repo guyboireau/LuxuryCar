@@ -1,0 +1,371 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none; /*enleve les puces*/
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*Ajout d'une police*/
+@font-face {
+    font-family: "glacial";
+    src: url(vue/css/gl-reg.otf) ;
+}
+
+/*Barre de navigation haut*/
+nav{
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 70px;
+}
+
+/*Logo Luxury Cars*/
+label.logo{
+    font-size: 30px;
+    /*font-family: "glacial" , sans-serif;*/
+    font-weight: bold;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    line-height: 70px;
+    padding: 0 100px;  
+}
+label.logo a{
+    color: #000;
+}
+
+/*Liste de liens du menu du haut*/
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+}
+/*Liens du haut*/
+nav ul li a{
+    color: #000;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 7px 13px;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    
+    /*effet soulignement*/
+    background-image: linear-gradient(#000000, #000000);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+    text-decoration: none;
+}
+/*effet soulignement*/
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
+    background-size: 100% 0.1em;
+}
+
+
+/*CAROUSEL d'images automatique*/
+.container{
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+.wrapper{
+    width: auto;
+    height:auto;
+    display: flex;
+    animation: slide 20s infinite; 
+}
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+img.carousel{
+    width: 100%; 
+}
+
+/*Menu de recherche des voitures*/
+.menu{
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+/*Liste des liens du menu de recherche*/
+.menu ul li{
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+}
+.menu ul li a{
+    color: #000;
+    font-size: 16px;
+    margin: 7px 13px;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    
+    /*effet soulignement*/
+    background-image: linear-gradient(#000000, #000000);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+    text-decoration: none;
+}
+/*effet soulignement*/
+.menu ul li a:hover,
+.menu ul li a:focus,
+.menu ul li a:active {
+  background-size: 100% 0.1em;
+}
+
+/* anciennement div changé en <div class="global">
+car ça interfèrait avec les autres <div> du dessus*/
+div.global {
+    width: 1400px; 
+    margin: auto; 
+}
+
+
+/*Voitures*/
+.ensemble {
+    width: 100%;
+}
+.ensemble img {
+    width: 350px;
+    height: 250px;
+    transition: transform .2s; 
+}
+.ensemble img:hover{
+    transform: scale(1.1);
+    
+}
+fieldset{
+    outline: none;
+    border: none;
+}
+.vignette {
+    text-align: center;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    
+    float: left;
+    margin: 50px;
+    width: 20%; 
+    margin-left: 5%;
+}
+/*
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 6px;
+}
+*/
+
+
+
+/*Formulaire connexion*/
+.form-conteneur{
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    padding-bottom:60px;
+    background: #eee;
+}
+.form-conteneur form{
+    padding:20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px black;
+    background:#fff;
+    text-align: center;
+    width: 500px;  
+}
+.form-conteneur form h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color:#333;
+    
+}
+.form-conteneur form input{
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    margin: 8px 0;
+    background:#eee;
+    outline: none;
+    border: none;
+}
+.form-conteneur form .btn-cnx{
+    background: #000000;
+    color:#fff;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+}
+.form-conteneur form .btn-cnx:hover{
+    color: rgb(0, 0, 0);
+    background:crimson;
+}
+
+
+/*titre de la vue*/
+.titre{
+    text-align:center;
+    font-weight: lighter;
+    
+    margin-top: 70px;
+}
+
+.form-recherche {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-recherche .barre-recherche{
+    width: 30%;
+    padding: 10px;
+    font-size: 17px;
+    margin-right: 10px;
+    background:#eee;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.form-recherche .btn-recherche{
+    padding: 10px;
+    text-transform: capitalize;
+    font-size: 17px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid crimson;
+    background: crimson;
+    color:white;
+}
+.form-recherche .btn-recherche:hover{
+    background:white;
+    color:crimson;
+    border: 1px solid crimson;
+    border-radius: 5px;
+}
+.voirplus{
+    padding: 3px;
+    text-transform: capitalize;
+    font-size: 14px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid crimson;
+    background: crimson;
+    color:white;
+    transition: transform .2s;
+}
+.voirplus:hover{
+    transform: scale(1.1);
+}
+
+/*Début Responsive*/
+@media screen and (max-width:900px){
+
+    nav ul li a{
+        font-size: 13px;
+    }
+    label.logo{
+        font-size: 25px;
+    }
+}
+
+#detailIMG {
+    width: 1000px;
+}
+#detail {
+    text-align: center;
+}
+
+footer {
+    display: inline-block;
+    background-color: lightgray;
+    width: 100%;
+    text-align: center  ;
+}
+
+/*formulaire du crud*/
+.crud{
+    border:none;
+    outline:none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.crud .btn-crud{
+    background-color: black;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.crud .btn-crud:hover{
+    color: rgb(0, 0, 0);
+    background: crimson;
+
+}
+.crud input, select{
+    width: 500px;
+    padding: 10px;
+    font-size: 17px;
+    margin: 8px 0  ;
+    background-color: #eee;
+    outline: none;
+    border: none;
+}
+tr, .crud form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+.conteneur {
+    padding: 5%;
+    flex-direction: row;
+    text-align: center;
+    
+}
+
